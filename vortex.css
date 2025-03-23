@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.vortex {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  animation: swirl 20s linear infinite;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verse {
+  position: absolute;
+  max-width: 300px;
+  font-size: 1.2em;
+  padding: 1em;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.verse.active {
+  opacity: 1;
+}
+
+@keyframes swirl {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h1 {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1.5em;
+  color: #ccc;
+}
